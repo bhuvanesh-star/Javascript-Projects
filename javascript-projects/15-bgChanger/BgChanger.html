@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <link rel="stylesheet" href="bgChanger.css">
+</head>
+<body>
+    <section>
+        <div class="bg">Red</div>
+        <select class="SelectMenu" name="color" onchange="changeColor(this)">
+            <option value="#ff2323">Red</option>
+            <option value="#66ff00">Green</option>
+            <option value="blue">Blue</option>
+            <option value="#ffff12">Yellow</option>
+            <option value="#ff69b4">Pink</option>
+        </select>
+    </section>
+    
+
+    <script>
+        function changeColor(getColor){
+            let bg = document.querySelector('.bg');
+            let selectColor = getColor.value;
+            let backgroundText = getColor.options[getColor.selectedIndex].text;
+            bg.style.background = selectColor;
+            bg.innerHTML = backgroundText;
+           
+        }
+    </script>
+</body>
+</html>

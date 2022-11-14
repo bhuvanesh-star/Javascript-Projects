@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Up/Down Timer</title>
+    <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+    <div class="container">
+        <label for="#hours">Hours</label>
+        <input type="number" id="hours" class="time"max="99" min="0" value="0">
+        <p id="p1" class="semicolon">:</p>
+        <label for="#minutes">Minutes</label>
+        <input type="number" id="minutes" class="time"max="60" min="0" value="0">
+        <p id="p2" class="semicolon">:</p>
+        <label for="#seconds">Seconds</label>
+        <input type="number" id="seconds" class="time"max="60" min="0" value="0">
+        <br><br>
+        <button id="start" class="btn">Start</button>
+        <br><br>
+        <button id="reset" class="btn">Reset</button>
+    </div>
+    <script src="timer.js"></script>
+</body>
+</html>

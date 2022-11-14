@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+body{
+    background-color: rgb(45, 41, 41);
+    height:200vh
+}
+header{
+    position: fixed;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    top:0;
+    left:0;
+    transition:0.6s;
+    padding:30px 80px;
+    z-index: 100000;
+    
+}
+header.sticky{
+    background-color:white
+}
+
+.logo{
+    text-decoration: none;
+    padding:30px;
+    font-size:2em;
+    font-weight: 800;
+    position:relative;
+    
+}
+header ul {
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul li {
+    position:relative;
+    list-style: none;
+    font-size:2em;
+    padding: 1em;   
+}
+
+header ul li a{
+    position:relative;
+    text-decoration: none;  
+    
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    background-image: url(prioi.jpg );
+    background-size: cover;
+}
+
+header .sticky ul li a {
+    color:black;
+}
+

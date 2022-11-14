@@ -1,0 +1,112 @@
+<!DOCTYPE html> COdes for single collapsible
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>readmore-readless</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .collapse-container {
+      background-color:orchid;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 10px;
+      margin: auto;
+
+    }
+
+    .collapse-img>img {
+      max-width: 300px;
+      max-height: 300px;
+    }
+
+    .collapse-content {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #moreText {
+      display: none;
+    }
+
+    .readmorelink {
+      text-decoration: none;
+      color: blue
+    }
+
+    @media only screen and (max-width:678px) {
+      .collapse-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media only screen and (max-width:328px) {
+      .collapse-img>img {
+        max-width: 200px;
+        max-height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="collapse-container">
+    <div class="collapse-img">
+      <img src="pexels-ethan.jpg" alt="thids is a mountain">
+    </div>
+    <div class="collapse-content">
+
+      <h1 style="text-align:left">garden of eden</h1><h2 style="text-align:right">this is edens</h2>
+      <h4>hkfhvoljfbvol</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis blanditiis optio aperiam
+        expedita?
+        Accusantium exercitationem molestiae, consequuntur deserunt ipsum sed eveniet temporibus quibusdam fugit commodi
+        alias
+        <span id="dots"  class="dots3">...</span><span id="moreText" class="read-more">Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Maxime, ipsa consequuntur est, architecto, voluptates obcaecati odio voluptate
+          animi
+          officiis officia esse saepe ea iste veniam! Nostrum natus repellat voluptas illo officiis dicta rem fuga in,
+          architecto molestias dolores rerum minus quo soluta nisi, recusandae praesentium assumenda, alias aliquid!
+          Vero maxime eligendi dolorum atque nemo laborum dolores nesciunt adipisci, iste debitis quod? Facere esse illum quisquam,
+          vero labore ullam inventore, laboriosam odio. <br>
+          Quae, odio, unde et nobis pariatur quasi maxime vel blanditiis earum
+          explicabo fuga laudantium quos. Quas corrupti unde deleniti, consequuntur fugit vero quia ducimus
+          placeat?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, accusamus ipsam officiis eius necessitatibus
+          exercitationem officia! Perspiciatis laborum illum aperiam ea officiis modi quis aliquam iste fugit itaque, architecto
+          inventore?
+        </span><a  onclick="myFunc()" class="readmorelink" id="info"> Info + </a>
+      </p>
+
+    </div>
+  </div>  
+  <script>
+    function myFunc() {
+      console.log("clicked")
+      var dots = document.getElementById("dots");
+      var readMore = document.getElementById("moreText");
+      var infoBtn = document.getElementById("info");
+      if (dots.style.display != "none") {
+        dots.style.display = "none";
+        moreText.style.display = "inline";
+        info.innerHTML = "Read Less";
+      }
+      else{
+        dots.style.display="inline";
+        moreText.style.display = "none";
+        info.innerHTML = "Info +";
+      }
+    }
+  </script>
+</body>
+
+</html> 

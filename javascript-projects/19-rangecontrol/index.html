@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style>
+    .imgBlur {
+        width: 800px;
+        float: left;
+        height: 450px;
+        background: url("colosseum-at-sunrise.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-filter: blur(20px); 
+        -moz-filter: blur(20px);
+        -o-filter: blur(20px);
+        -ms-filter: blur(5px); 
+        filter: blur(20px);
+        z-index: 100;
+    }
+</style>
+
+<body class="body">
+    <input type="range" id="blurValue" class="blurValue" min="0" max="100" step="1" onChange="changed()"></input>
+
+    <div class="imgBlur" id="imgBlur"></div>
+
+    <script>
+        function changed() {
+
+            var obj = document.getElementById('imgBlur');
+            obj.style["-webkit-filter"] = "blur(" + document.getElementById("blurValue").value + "px)";
+            obj.style["-moz-filter"] = "blur(" + document.getElementById("blurValue").value + "px)";
+            obj.style["-o-filter"] = "blur(" + document.getElementById("blurValue").value + "px)";
+            obj.style["-ms-filter"] = "blur(" + document.getElementById("blurValue").value + "px)";
+            obj.style["filter"] = "blur(" + document.getElementById("blurValue").value + "px)";
+        }
+
+        //javascript changes the css properties so that range control increases or decreases the opacity
+
+
+    </script>
+</body>
+
+</html>

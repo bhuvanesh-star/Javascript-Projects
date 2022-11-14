@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Registration Form</h1>
+            <div class="input-control">
+                <label for="">username</label>
+                <input id="userName" name="username"  type="text" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="emailId">email</label>
+                <input id="mail" name="emailId"  type="email" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="typePassword">password</label>
+                <input id="createPassword" name="typePassword"  type="password" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">password</label>
+                <input id="passwordConfirm" name="password"  type="password" required>
+                <div class="error"></div>
+            </div>
+            <button>Sign Up</button>
+        </form>
+    </div>
+
+    <script defer src="forms.js">
+
+    </script>
+</body>
+</html>
